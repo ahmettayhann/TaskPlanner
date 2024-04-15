@@ -17,8 +17,7 @@ TaskPlanner is a web application that allows users to manage their tasks efficie
 
 To run TaskPlanner locally, follow these steps:
 
-1. Copy the `devise_example.rb` file:
-   cp config/initializers/devise_example.rb to config/initializers/devise.rb
+1. To sign in with Google you can use google client_id and client_secret that you create Google Developer Console
 2. Install dependencies: `bundle install`
 3. Set up the database: `rails db:create && rails db:migrate`
 4. Start the Rails server: `rails server`
