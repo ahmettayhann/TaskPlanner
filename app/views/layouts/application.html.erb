@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPlanner</title>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %> 
+  <%= csp_meta_tag %>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">TaskPlanner</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%#= link_to 'Sign Out', sign_out_path, method: :delete, class: 'btn btn-outline-danger me-2' %>
+              <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger me-2' %>
+              <%#= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger me-2' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= button_to 'Login with Google', user_google_oauth2_omniauth_authorize_path, method: :post, :data => {turbo: "false"} %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <div class="taskplanner-header">
+          <a href="/" class="list-group-item list-group-item-action">
+            <h3 class="text-center">TaskPlanner</h3>
+          </a>
+        </div>
+        <div class="list-group">
+          <%= link_to 'Tasks', tasks_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'Profile', user_path(current_user), class: 'list-group-item list-group-item-action' %>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="col-md-9">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+<%# if user_signed_in? %>
+  <%#= button_to "Sign Out", destroy_user_session_path, method: :destroy %>
+<%# else %>
+  <%#= link_to 'Sign In', new_user_session_path %>
+  <%#= link_to 'Sign Up', new_user_registration_path %>
+<%# end %>
+    <%#= stylesheet_link_tag 'application', 'tasks', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+

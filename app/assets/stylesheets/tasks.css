@@ -1,0 +1,26 @@
+/* app/assets/stylesheets/tasks.css */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #28a745; /* Green button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.btn-primary:hover {
+  background-color: #218838; /* Darker green on hover */
+}

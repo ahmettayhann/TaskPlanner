@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= @task.title %></h5>
+    <p class="card-text"><%= @task.description %></p>
+    <p class="card-text"><%= @task.due_date&.strftime("%d-%m-%Y") %></p>
+    <p class="card-text"><strong>Status:</strong> <%= @task.status.capitalize %></p>
+    <%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-secondary' %>
+    <%= link_to 'Back', tasks_path, class: 'btn btn-primary' %>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+/* app/assets/stylesheets/users.css */
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-edit {
+  margin-left: 20px;
+}

@@ -1,0 +1,15 @@
+<!-- app/views/users/show.html.erb -->
+<h1>Profile</h1>
+
+<div class="profile">
+  <div class="profile-info">
+    <h3><%= @user.full_name %></h3>
+    <p>Email: <%= @user.email %></p>
+    <p>Birth Date: <%= @user.birth_date %></p>
+    <p>GSM: <%= @user.gsm %></p>
+  </div>
+
+  <div class="profile-edit">
+    <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary' %>
+  </div>
+</div>

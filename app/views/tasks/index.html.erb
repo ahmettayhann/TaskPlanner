@@ -1,0 +1,17 @@
+<h1>Task List</h1>
+
+<%= link_to 'New Task', new_task_path, class: 'btn btn-primary mb-3' %>
+
+<% @tasks.each do |task| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title"><%= task.title %></h5>
+      <p class="card-text"><%= task.description %></p>
+      <p class="card-text"><%= task.due_date&.strftime("%d-%m-%Y") %></p>
+      <p class="card-text"><strong>Status:</strong> <%= task.status.capitalize %></p>
+      <%= link_to 'View', task_path(task), class: 'btn btn-info btn-sm' %>
+      <%= link_to 'Edit', edit_task_path(task), class: 'btn btn-secondary btn-sm' %>
+      <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,64 @@
+/* app/assets/stylesheets/application.scss */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.navbar {
+  background-color: #007bff !important; /* Primary blue navbar */
+}
+
+.navbar-brand {
+  color: #fff; /* White text for navbar brand */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* White text for navbar links */
+}
+
+.container {
+  background-color: #fff; /* White background for main content */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.list-group-item {
+  background-color: #f1f1f1; /* Light gray background for sidebar items */
+}
+
+.list-group-item.active {
+  background-color: #007bff !important; /* Primary blue background for active sidebar item */
+  color: #fff; /* White text for active sidebar item */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary blue button */
+  border-color: #007bff; /* Primary blue border */
+}
+
+.btn-back {
+  background-color: #e72020; /* Primary blue button */
+  border-color: #e72020; /* Primary blue border */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Darker blue border on hover */
+}
+
+.form-control {
+  border-color: #ced4da; /* Gray border for form fields */
+}
+
+.list-group-item:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.taskplanner-header {
+  background-color: #042a53; /* Dark blue background color */
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.taskplanner-header a {
+  color: 042a53(30, 3, 111); /* Text color white */
+}
