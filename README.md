@@ -2,7 +2,7 @@
 
 TaskPlanner is a web application that allows users to manage their tasks efficiently.
 
-| Ruby  | Rails   |
+| Ruby  | Rails |
 | ---   |  ---    |
 | 3.2.3 | 7.1.3.2 |
 
@@ -17,7 +17,8 @@ TaskPlanner is a web application that allows users to manage their tasks efficie
 
 To run TaskPlanner locally, follow these steps:
 
-1. Clone the repository: `git clone <repository-url>`
+1. Copy the `devise_example.rb` file:
+   cp config/initializers/devise_example.rb to config/initializers/devise.rb
 2. Install dependencies: `bundle install`
 3. Set up the database: `rails db:create && rails db:migrate`
 4. Start the Rails server: `rails server`
@@ -29,6 +30,7 @@ To run TaskPlanner locally, follow these steps:
 - Once logged in, you can create, view, edit, and delete tasks from the dashboard.
 - Update your profile information by clicking on the "Profile" link in the navigation bar.
 - Sign out of your account by clicking on the "Log Out" button.
+- With these instructions, users will be able to set up Google OAuth for authentication by copying the example configuration file and replacing the placeholders with their actual Google OAuth credentials.
 
 ## Contributing
 
