@@ -23,7 +23,7 @@ To run TaskPlanner locally, follow these steps:
 2. Install dependencies: `bundle install`
 3. Set up the database: `rails db:create && rails db:migrate`
 4. Start the Rails server: `rails server`
-5. Visit `http://localhost:3000` in your web browser to access TaskPlanner.
+5. Visit `http://localhost:3000/home/index` in your web browser to access TaskPlanner.
 
 ## Usage
 
